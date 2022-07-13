@@ -9,7 +9,8 @@ function Tableau() {
         tableauCategories.push(produit.category)
     })
 
-    const listeCategories = tableauCategories
+    const categoriesUnique = [...new Set(tableauCategories)]
+    const listeCategories = categoriesUnique
         .map((categorie) =>
             <Categories
                 key={categorie}
