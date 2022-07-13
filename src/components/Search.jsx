@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/search.css";
 
 function Search(props) {
     return (
@@ -9,7 +10,7 @@ function Search(props) {
                     placeholder="Search..."
                     value={props.value}
                     onChange={props.onChange}
-                /><br />
+                />
                 <label>
                     <input type="checkbox" onChange={props.filterOnChange} />
                     <span>Only show products in stock</span>

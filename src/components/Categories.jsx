@@ -18,6 +18,7 @@ function Categories(props) {
                         key={produit.name}
                         produit={produit.name}
                         price={produit.price}
+                        stocked={produit.stocked}
                     />
                 )
             }

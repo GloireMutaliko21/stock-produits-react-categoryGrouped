@@ -3,7 +3,7 @@ import React from 'react'
 function ListeProduits(props) {
     return (
         <tr>
-            <td>{props.produit}</td>
+            {props.stocked ? <td>{props.produit}</td> : <td style={{color: "red"}}>{props.produit}</td>}
             <td>{props.price}</td>
         </tr>
     )
