@@ -1,6 +1,7 @@
 import React from "react";
 import { produits } from "../data/produits";
 import Categories from './Categories';
+import '../styles/tableau.css'
 
 function Tableau() {
     let tableauCategories = []
