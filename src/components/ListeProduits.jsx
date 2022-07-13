@@ -1,7 +1,12 @@
 import React from 'react'
 
 function ListeProduits(props) {
-    return <li>{props.produit}</li>
+    return (
+        <tr>
+            <td>{props.produit}</td>
+            <td>{props.price}</td>
+        </tr>
+    )
 }
 
 export default ListeProduits

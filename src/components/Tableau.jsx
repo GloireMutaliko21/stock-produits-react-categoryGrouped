@@ -18,7 +18,12 @@ function Tableau() {
             />
         )
 
-    return <div>{listeCategories} </div>
+    return <div>
+    <table>
+        {listeCategories} 
+    </table>
+    
+    </div>
 
 }
 
