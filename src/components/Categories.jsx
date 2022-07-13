@@ -8,8 +8,13 @@ function Categories(props) {
             {props.categorie}
             {
                 produits.map((produit) =>
-                    <ListeProduits key={produit.name} produit={produit.name} />
-                )}
+                    produit.category === props.categorie &&
+                    <ListeProduits
+                        key={produit.name}
+                        produit={produit.name}
+                    />
+                )
+            }
         </div>
     )
 }
