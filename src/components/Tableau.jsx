@@ -3,10 +3,14 @@ import { produits } from "../data/produits";
 import Categories from './Categories';
 import '../styles/tableau.css'
 
-function Tableau() {
+function Tableau(props) {
+    const { filterText } = props
     let tableauCategories = []
 
     produits.forEach((produit) => {
+        if (produit.name.indexOf(filterText) === -1) {
+            return;
+        }
         tableauCategories.push(produit.category)
     })
 
@@ -20,10 +24,10 @@ function Tableau() {
         )
 
     return <div>
-    <table>
-        {listeCategories} 
-    </table>
-    
+        <table>
+            {listeCategories}
+        </table>
+
     </div>
 
 }
