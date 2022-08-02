@@ -1,37 +1,21 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import Search from './Search';
 import Tableau from './Tableau';
 
-class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      filterText: ''
-    };
-    this.handleFilterTextChange =
-      this.handleFilterTextChange.bind(this);
-  }
-
-  handleFilterTextChange(filterText) {
-    this.setState({
-      filterText: filterText
-    });
-  }
-
-  render() {
+function App(){
+    const [filterText, setFilterText] = useState()
+  
     return (
       <div className="App">
-        <Search
-          filterText={this.state.filterText}
-          onFilterTextChange={this.handleFilterTextChange}
+        <Search 
+          filterText={filterText}
+          onSearchChange={setFilterText}
         />
         <Tableau 
-          filterText={this.state.filterText}
+          filterText={filterText}
         />
       </div>
     );
   }
-}
 
 export default App;

@@ -1,23 +1,19 @@
 import React from "react";
 import "../styles/search.css";
 
-function Search({value, onFilterTextChange, filterOnChange}) {
+function Search({ filterText, onSearchChange, onlyOnStock }) {
     
-    function handleFilterTextChange(e) {
-        onFilterTextChange(e.target.value)
-    }
-
     return (
         <div>
             <form>
                 <input
                     type="text"
                     placeholder="Search..."
-                    value={value}
-                    onChange={handleFilterTextChange}
+                    value={filterText}
+                    onChange={(e)=>{onSearchChange(e.target.value)}}
                 />
                 <label>
-                    <input type="checkbox" onChange={filterOnChange} />
+                    <input type="checkbox" onChange={onlyOnStock} />
                     <span>Only show products in stock</span>
                 </label>
             </form>

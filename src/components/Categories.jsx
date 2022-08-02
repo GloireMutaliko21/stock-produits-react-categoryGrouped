@@ -3,6 +3,7 @@ import { produits } from '../data/produits';
 import ListeProduits from "./ListeProduits";
 
 function Categories(props) {
+    
     return (
         <div>
             <tr>

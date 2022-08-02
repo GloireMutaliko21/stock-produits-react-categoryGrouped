@@ -8,9 +8,6 @@ function Tableau(props) {
     let tableauCategories = []
 
     produits.forEach((produit) => {
-        if (produit.name.indexOf(filterText) === -1) {
-            return;
-        }
         tableauCategories.push(produit.category)
     })
 
@@ -20,6 +17,7 @@ function Tableau(props) {
             <Categories
                 key={categorie}
                 categorie={categorie}
+                filterText={filterText}
             />
         )
 
